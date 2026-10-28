@@ -26,27 +26,27 @@
     });
   }
 
-  // Smooth reveal for cards (reduced motion respected)
+  // Smooth reveal for cards (reduced motion respected).
+  // Elements stay visible by default; the reveal class is only added when
+  // IntersectionObserver is available, so content is never hidden if JS fails.
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const observer = window.IntersectionObserver && !prefersReduced
+  const supportsObserver = window.IntersectionObserver && !prefersReduced;
+  const observer = supportsObserver
     ? new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('is-visible');
           }
         });
       }, { threshold: 0.1 })
     : null;
 
   document.querySelectorAll('.section-card, .card-link').forEach((el) => {
-    if (!prefersReduced) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(12px)';
-      el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    if (supportsObserver) {
+      el.classList.add('reveal');
       observer.observe(el);
     } else {
-      el.style.opacity = '1';
+      el.classList.add('is-visible');
     }
   });
 })();

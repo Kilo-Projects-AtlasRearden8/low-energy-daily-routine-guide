@@ -24,6 +24,12 @@
   .card .lines { border: 1px solid #999; min-height: 14mm; border-radius: 3px; padding: 2mm; margin-top: 3mm; break-inside: avoid; }
   .small { font-size: 8.5pt; color: #444; }
   @page { size: Letter; margin: 10mm; }
+  @media print {
+    body { background: #fff; color: #000; font-size: 11pt; }
+    header.noprint, footer.noprint { display: none !important; }
+    .sheet { margin: 0; padding: 0; }
+    .cards { margin: 0; }
+  }
   @media screen {
     body { background: var(--bg); padding: 2rem; }
     header { margin-bottom: 2rem; }
