@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Printable Routine Cards — Asdale Dynamics, LLC</title>
+<meta name="description" content="Printable routine cards for the Low-Energy & ADHD-Friendly Daily Routine Guide by Asdale Dynamics, LLC">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Card page print layout — Letter/A4, four cards per page front, tracker back */
+  body { font-size: 11pt; background: #fff; }
+  .sheet { max-width: 100%; margin: 0; padding: 0; }
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10mm; margin: 8mm; }
+  .card {
+    border: 2px solid #2e2a25;
+    border-radius: 6px;
+    padding: 8mm 6mm;
+    break-inside: avoid;
+    background: #fff;
+    page-break-inside: avoid;
+  }
+  .card h3 { margin: 0 0 4mm; font-size: 13pt; border-bottom: 2px solid #2e2a25; padding-bottom: 2mm; }
+  .card p, .card li { font-size: 10pt; margin: 0 0 3mm; }
+  .card .lines { border: 1px solid #999; min-height: 14mm; border-radius: 3px; padding: 2mm; margin-top: 3mm; break-inside: avoid; }
+  .small { font-size: 8.5pt; color: #444; }
+  @page { size: Letter; margin: 10mm; }
+  @media screen {
+    body { background: var(--bg); padding: 2rem; }
+    header { margin-bottom: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="noprint">
+  <a href="index.html" style="text-decoration:none; color:var(--accent-dark); font-weight:700;">&larr; Back to guide</a>
+  <h1>Printable Routine Cards</h1>
+  <p>Print this page (Ctrl+P / Cmd+P) with <strong>background graphics on</strong>. Cut along the borders.</p>
+</header>
+
+<div class="sheet">
+  <div class="cards">
+    <!-- Card 1: One Task Today -->
+    <div class="card">
+      <h3>One Task Today</h3>
+      <p style="margin:0 0 4mm;"><strong>My one task:</strong></p>
+      <div class="lines"></div>
+      <p><strong>When I do it:</strong></p>
+      <div class="lines" style="min-height:9mm;"></div>
+      <p><strong>Done:</strong> &#9744;</p>
+      <p class="small">One task at a time. That is enough.</p>
+    </div>
+
+    <!-- Card 2: Gentle Schedule -->
+    <div class="card">
+      <h3>Gentle Schedule</h3>
+      <p style="margin:0 0 2mm;">Morning:</p>
+      <div class="lines" style="min-height:7mm;"></div>
+      <p style="margin:3mm 0 2mm;">Midday:</p>
+      <div class="lines" style="min-height:7mm;"></div>
+      <p style="margin:3mm 0 2mm;">Evening:</p>
+      <div class="lines" style="min-height:7mm;"></div>
+      <p><strong>Rest blocks:</strong></p>
+      <div class="lines" style="min-height:7mm;"></div>
+      <p class="small">Times are anchors, not rules.</p>
+    </div>
+
+    <!-- Card 3: Energy Tracker -->
+    <div class="card">
+      <h3>Energy Tracker (1&ndash;5)</h3>
+      <p style="margin:0 0 2mm;">Morning: ___&nbsp;&nbsp;Midday: ___&nbsp;&nbsp;Evening: ___</p>
+      <p><strong>5</strong> several tasks &nbsp; <strong>4</strong> one or two tasks &nbsp; <strong>3</strong> one small task &nbsp; <strong>2</strong> self-care only &nbsp; <strong>1</strong> rest</p>
+      <p style="margin:3mm 0 2mm;">What helped:</p>
+      <div class="lines" style="min-height:8mm;"></div>
+      <p style="margin:3mm 0 2mm;">What drained:</p>
+      <div class="lines" style="min-height:8mm;"></div>
+      <p class="small">A &ldquo;1&rdquo; day is a rest day, not a failed day.</p>
+    </div>
+
+    <!-- Card 4: Rest Permission -->
+    <div class="card">
+      <h3>Rest Permission</h3>
+      <p style="font-style:italic; font-size:11pt;">It is okay to rest now. Rest is part of the day, not a reward you have to earn.</p>
+      <p class="lines" style="min-height:16mm;"></p>
+      <p style="margin-top:3mm;"><strong>Signed:</strong> ______________________</p>
+      <p class="small">No guilt. No hustle.</p>
+    </div>
+
+    <!-- Card 5: Low-Energy Tasks -->
+    <div class="card">
+      <h3>Low-Energy Tasks</h3>
+      <div class="lines" style="min-height:6mm; margin-bottom:2mm;"></div>
+      <div class="lines" style="min-height:6mm; margin-bottom:2mm;"></div>
+      <div class="lines" style="min-height:6mm; margin-bottom:2mm;"></div>
+      <div class="lines" style="min-height:6mm; margin-bottom:2mm;"></div>
+      <div class="lines" style="min-height:6mm; margin-bottom:2mm;"></div>
+      <p class="small">Make them tiny. Rinse one spoon. That counts.</p>
+    </div>
+
+    <!-- Card 6: Blank / notes -->
+    <div class="card">
+      <h3>Notes</h3>
+      <div class="lines" style="min-height:26mm;"></div>
+      <div class="lines" style="min-height:26mm;"></div>
+      <p class="small">Asdale Dynamics, LLC &mdash; Copyright (c) 2026 Asdale Dynamics, LLC</p>
+    </div>
+  </div>
+</div>
+
+<footer class="noprint" style="margin-top:2rem; text-align:center; color:var(--muted); font-size:0.9rem;">
+  <p>Created and published by <strong>Asdale Dynamics, LLC</strong> (Indiana, formed October 2026). &copy; 2026 Asdale Dynamics, LLC. MIT Licensed.</p>
+</footer>
+</body>
+</html>
